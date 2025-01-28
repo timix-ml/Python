@@ -1,3 +1,16 @@
+"""
+# 1
+Запускает 10 процессов
+
+# 2
+Запускает 10 потоков в каждом процессе
+
+# 3 
+Запускает в каждом потоке по 10 задача с worker()
+
+В итоге worker(), выполниться 1000 раз в много процессорно-поточно-задачном режиме :)
+"""
+
 from asyncio import TaskGroup, run, sleep
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 from os import getpid, getppid
